@@ -4,6 +4,6 @@ var smartView = (function(){
 	};
 
 	VIEW.init = function init(){
-		
+    
 	}
 })
