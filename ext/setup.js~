@@ -13,5 +13,5 @@ var setupStructure = function() {
   reviewBars.className = "smartReviews";
   reviewDiv.appendChild(reviewBars);
 }
-setupStructure();
+
 console.log("setup finished!");

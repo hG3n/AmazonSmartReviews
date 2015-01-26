@@ -2,7 +2,7 @@
   "manifest_version": 2, 
 
   "name": "Amazon Smart Reviews",
-  "description": "This Extension will remove the current Amazon Reviews and replace them with the Amazon Smart Review Visualisation",
+  "description": "This Extension will remove the current Amazon Reviews and replace them whit the Amazon Smart Review Visualisation",
   "version": "1.0",
   "permissions": [
     "activeTab",
