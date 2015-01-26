@@ -2,11 +2,16 @@
   "manifest_version": 2, 
 
   "name": "Amazon Smart Reviews",
-  "description": "This Extension will remove the current Amazon Reviews and replace them with the Amazon Smart Review Visualisation",
+  "description": "This Extension will remove the current Amazon Reviews and replace them with the Amazon Smart Review Visualization",
   "version": "1.0",
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "http://*/",
+    "*://*/*",
+    "http://localhost:8000/*",
+    "Access-Control-Allow-Origin: http://webuser.uni-weimar.de/~senu8384/test.csv",
+    "http://webuser.uni-weimar.de/~senu8384/test.csv"
   ],
 
   "background": {

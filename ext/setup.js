@@ -1,17 +1,33 @@
-var setupStructure = function() {
+var setup_structure = function() {
   // clear the review div
-  var reviewDiv = document.getElementById("cm_cr_dpwidget");
-  reviewDiv.innerHTML = "";
+  var review_div = document.getElementById("cm_cr_dpwidget");
+  review_div.innerHTML = "";
+  var clear_div = document.getElementById("purchase-similarities_feature_div");
+  clear_div.innerHTML = "";
+  clear_div = document.getElementById("buyxgety_feature_div");
+  clear_div.innerHTML = "";
+  clear_div = document.getElementById("promotions_feature_div");
+  clear_div.innerHTML = "";
+  clear_div = document.getElementById("product-description_feature_div");
+  clear_div.innerHTML = "";
+  clear_div = document.getElementById("product-details-grid_feature_div");
+  clear_div.innerHTML = "";
+  clear_div = document.getElementById("conditional-probability_feature_div");
+  clear_div.innerHTML = "";
+  clear_div = document.getElementById("ask-btf_feature_div");
+  clear_div.innerHTML = "";
+  clear_div = document.getElementById("revDivider");
+  clear_div.innerHTML = "";
 
   // create div for header and further informations
   var header = document.createElement("div");
   header.className = "smartHeader";
-  reviewDiv.appendChild(header);
+  review_div.appendChild(header);
 
   // create div for review visualisation
-  var reviewBars = document.createElement("div");
-  reviewBars.className = "smartReviews";
-  reviewDiv.appendChild(reviewBars);
+  var review_visu = document.createElement("div");
+  review_visu.className = "smartReviews";
+  review_div.appendChild(review_visu);
 }
-setupStructure();
+setup_structure();
 console.log("setup finished!");
