@@ -1,0 +1,380 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inn",
+				"innerHeight〔variable〕"
+			],
+			[
+				"in",
+				"innerHeight〔variable〕"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"g",
+				"getElementById〔function〕"
+			],
+			[
+				"innt",
+				"innerHeight〔variable〕"
+			],
+			[
+				"sc",
+				"script	Tag"
+			],
+			[
+				"scrip",
+				"script>〔element〕"
+			],
+			[
+				"ee",
+				"executeScript"
+			],
+			[
+				"sma",
+				"smartReviewSVG"
+			],
+			[
+				"set",
+				"setupStructure"
+			],
+			[
+				"revie",
+				"reviewBars"
+			],
+			[
+				"re",
+				"reviewBars"
+			],
+			[
+				"setup",
+				"setupStructure"
+			],
+			[
+				"crea",
+				"createElement  (function)"
+			],
+			[
+				"get",
+				"getElementsByTagName  (function)"
+			],
+			[
+				"e",
+				"executeScript"
+			],
+			[
+				"d",
+				"domain  (variable)"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"r",
+				"remove  (function)"
+			],
+			[
+				"chess",
+				"chessboardY"
+			],
+			[
+				"chessb",
+				"chessboardX"
+			],
+			[
+				"chessboard",
+				"chessboardX"
+			],
+			[
+				"image",
+				"imagearray"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"objp",
+				"objpoints"
+			],
+			[
+				"no",
+				"None	keyword"
+			],
+			[
+				"corners",
+				"corners"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				":",
+				":w - Save"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				":ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				":x",
+				"Set Syntax: XSL"
+			],
+			[
+				"paka",
+				"Package Control: Discover Packages"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"packae",
+				"Package Control: Upgrade Package"
+			],
+			[
+				":py",
+				"Set Syntax: Python"
+			],
+			[
+				"oack",
+				"Package Control: Install Package"
+			],
+			[
+				":q",
+				"Set Syntax: SQL"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"acka",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/setup.js",
+		"/Users/hGen/Desktop/Plants-Humans-Machines/main.css",
+		"/Users/hGen/Desktop/Plants-Humans-Machines/main.html",
+		"/Users/hGen/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/hGen/Desktop/Plants-Humans-Machines/styles.css",
+		"/Users/hGen/Desktop/Plants-Humans-Machines/phm.sublime-project",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/reviews.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/background.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/manifest.json",
+		"/Users/hGen/Documents/Uni/6. Semester/visualization/project/SmartComments/index.html",
+		"/Users/hGen/Library/Application Support/Sublime Text 2/Packages/D3.js Snippets/attr.sublime-snippet",
+		"/Users/hGen/Desktop/AmazonSmartReviews/index.html",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/src/reviews.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/src/background.js",
+		"/Users/hGen/Library/Application Support/Sublime Text 2/Packages/JavaScript/console.log.sublime-snippet",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/removeCurrentReviews.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/remove_current_reviews.js",
+		"/Users/hGen/Downloads/make_page_red/remove_current_reviews.js",
+		"/Users/hGen/Downloads/make_page_red/background.js",
+		"/Users/hGen/Downloads/make_page_red/manifest.json",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/popup.html",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/popup.css",
+		"/Users/hGen/Desktop/AmazonSmartReviews/src/smartController.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/src/smartModel.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/src/smartView.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/AmazonSmartReviews.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/resources/leather.csv",
+		"/Users/hGen/Desktop/AmazonSmartReviews/ext/popup.js",
+		"/Users/hGen/Desktop/AmazonSmartReviews/index.css",
+		"/Users/hGen/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/var/folders/tj/nd0fctc10w5590tsdz14m9xh0000gn/T/rsub-2g9ugf/tkinter.py",
+		"/Users/hGen/Desktop/tkinter/main.py",
+		"/var/folders/tj/nd0fctc10w5590tsdz14m9xh0000gn/T/rsub-vYhvVc/tkinter",
+		"/var/folders/tj/nd0fctc10w5590tsdz14m9xh0000gn/T/rsub-wF_Yo_/tkin",
+		"/var/folders/tj/nd0fctc10w5590tsdz14m9xh0000gn/T/rsub-Lex9tt/tkinter.py",
+		"/var/folders/tj/nd0fctc10w5590tsdz14m9xh0000gn/T/rsub-cxljyl/preview.py",
+		"/Users/hGen/Desktop/tkinter/test.py",
+		"/Users/hGen/Desktop/create-google-query.py",
+		"/Users/hGen/Desktop/calibration/cal.py",
+		"/Users/hGen/Desktop/calibration-py/cal.py",
+		"/Users/hGen/Desktop/calibration-py/calibration.py",
+		"/Users/hGen/Desktop/calibration-py/calibration2.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"var",
+			"AmbientLight+",
+			"AmbientLight",
+			"window.innerHeight",
+			"window",
+			"window.innerWidth",
+			"img",
+			"objectpoints\n# calculate camera matrix and distort the\n    \ngray.shape[:",
+			"imagepoints",
+			"imagearray"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

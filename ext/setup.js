@@ -13,5 +13,10 @@ var setupStructure = function() {
   reviewBars.className = "smartReviews";
   reviewDiv.appendChild(reviewBars);
 }
+
+var setupAWS = function() {
+  
+}
+
 setupStructure();
 console.log("setup finished!");
