@@ -14,27 +14,19 @@ var review_data = [];
 var rect_data = [];
 var min_vote_sum, max_vote_sum;
 var width_sum = 0;
-var svg_container = d3.select(".smartReviews")
+var visu_container = d3.select(".smart_review_visu")
                       .append("svg")
                       .attr("width", w)
                       .attr("height", h + 10);
 
-function mapToScreen(val) {
-        var m = d3.scale.linear()
-                  .domain([0,totalWidth])
-                  .range([1,w-correct]);
-        return m(mapTo(val));
-      }
+var text_container = d3.select(".smart_review_text")
+                      .append("svg")
+                      .attr("width", w)
+                      .attr("height", 500);
 
-      function mapTo(val) {
-        var s = d3.scale.linear()
-                  .domain([minHelpAvg,maxHelpAvg])
-                  .range([1,10]);
-        return s(val);
-      }
 
-function initSmartReviews() {
-  console.log("init reviews");
+
+function init_reviews() {
   d3.csv("http://webuser.uni-weimar.de/~senu8384/test2.csv", function(error,data){
     if(error) {
       console.log(error);
@@ -78,13 +70,13 @@ function initSmartReviews() {
                         rating: d.rating});
         current_width += mapped_width;
       });
-      draw(rect_data,svg_container)
     }
+    draw(rect_data,visu_container);
   });
 }
 
-function draw(data,svg) {
-  var rects = svg.selectAll("rect")
+function draw(data,visu_svg) {
+  var rects = visu_svg.selectAll("rect")
     .data(data)
     .enter()
     .append("rect");
@@ -101,19 +93,41 @@ function draw(data,svg) {
     .attr("stroke", "white")
     .attr("fill", function(d) {return color_scale(d.rating);})
     .on("mouseover",  function(d,i) {
-      svg.select("#r"+parseInt(d.id))
+      visu_svg.select("#r"+parseInt(d.id))
         .transition()
         .duration(100)
         .attr("fill", "#66CCFF");
+      draw_text(review_data,rect_data[d.id],text_container);
     })
     .on("mouseout",function (d,i) {
-      svg.select("#r"+parseInt(d.id))
+      visu_svg.select("#r"+parseInt(d.id))
         .transition()
         .duration(100)
         .attr("fill", color_scale(d.rating));
+      delete_text(d.id,text_container);
     });
   }
 
-initSmartReviews();
+function draw_text(data,rect,text_svg){
+  var text_box = text_svg.append("rect")
+    .attr("id","t"+ rect.id)
+    .attr("x", function(d,i) { return rect.x })
+    .attr("y", 0)
+    .attr("width", 400 )
+    .attr("height", 400)
+    .attr("stroke", "gold")
+    .attr("fill", "#55BBEE");
+
+  d3.select(".smart_review_info")
+    .text(data[rect.id].info_text);
+}
+
+function delete_text(id,text_svg){
+  text_svg.select("#t"+parseInt(id)).remove();
+  d3.select(".smart_review_info")
+    .text("");
+}
+
+init_reviews();
 
 console.log("Created reviews");
