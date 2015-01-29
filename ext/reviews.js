@@ -18,6 +18,8 @@ var visu_container = d3.select(".smart_visu")
                       .append("svg")
                       .attr("width", w)
                       .attr("height", h + 10);
+var pointer = visu_container.append("polygon")
+                            .attr("id","pointer");
 
 function init_reviews() {
   d3.csv("http://webuser.uni-weimar.de/~senu8384/test2.csv", function(error,data){
@@ -88,6 +90,7 @@ function draw(data,visu_svg) {
         .transition()
         .duration(100)
         .attr("fill", "#44AADD");
+      draw_pointer(rect_data[d.id]);
       draw_text(review_data,rect_data[d.id]);
     })
     .on("mouseout",function (d,i) {
@@ -95,19 +98,53 @@ function draw(data,visu_svg) {
         .transition()
         .duration(100)
         .attr("fill", color_scale(d.vote_sum));
-      delete_text(d.id);
+      //delete_pointer();
+      //delete_text(d.id);
     });
   }
 
+function draw_pointer(rect){
+  var rect_pos = rect.x + (rect.width / 2);
+  visu_container.select("#pointer")
+      .style("display", "initial")
+      .transition()
+      .duration(100)
+      .style("fill", "#66CCFF")
+      .style("stroke", "#66CCFF")
+      .attr("points",rect_pos+","+h+","+(rect_pos-10)+","+(h+10)+","+(rect_pos+10)+","+(h+10) );
+}
+
+function delete_pointer(){
+  visu_container.select("#pointer")
+      .style("display", "none")
+}
+
+
 function draw_text(data,rect){
+  var text_width = 400;
+  var text_height = 300;
+  var text_x = 0;
   d3.select(".smart_text")
     .style("display","block")
-    .style("width","400px")
-    .style("height","300px")
+    .style("width",text_width+"px")
+    .style("height",text_height+"px")
     .style("background-color", "#66CCFF")
     .style("overflow-y","auto")
-    .text(data[rect.id].id + "         " +
+    .text("ID: "+data[rect.id].id + " - " +
           data[rect.id].info_text);
+
+  // align textbox under the middle of his corresponding rect
+  var rect_pos = rect.x + (rect.width / 2);
+  if (rect_pos >= w - (text_width/2))
+    text_x = w - text_width;
+  else if( rect_pos - (text_width/2) < 0)
+    text_x = 0;
+  else
+    text_x = rect_pos - (text_width/2);
+  d3.select(".smart_text")
+    .transition()
+    .duration(200)
+    .style("margin-left",text_x+"px");
 }
 
 function delete_text(id){
