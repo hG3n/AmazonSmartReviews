@@ -14,17 +14,10 @@ var review_data = [];
 var rect_data = [];
 var min_vote_sum, max_vote_sum;
 var width_sum = 0;
-var visu_container = d3.select(".smart_review_visu")
+var visu_container = d3.select(".smart_visu")
                       .append("svg")
                       .attr("width", w)
                       .attr("height", h + 10);
-
-var text_container = d3.select(".smart_review_text")
-                      .append("svg")
-                      .attr("width", w)
-                      .attr("height", 500);
-
-
 
 function init_reviews() {
   d3.csv("http://webuser.uni-weimar.de/~senu8384/test2.csv", function(error,data){
@@ -51,9 +44,7 @@ function init_reviews() {
         .range([1,10]);
 
       review_data.forEach(function(d) {             // calc width of all rects
-        console.log("object:",d);
         width_sum += parseFloat(vote_sum_scale(d.vote_sum));
-        console.log(vote_sum_scale(d.vote_sum));
       });
 
       var screen_scale = d3.scale.linear()          // scales values into screen size
@@ -82,8 +73,8 @@ function draw(data,visu_svg) {
     .append("rect");
 
   var color_scale = d3.scale.linear()
-    .domain([1,5])
-    .range(["lightgray","gold"]);
+    .domain([min_vote_sum,max_vote_sum])
+    .range(["lightgray","green"]);
 
   rects.attr("id", function(d,i) { return "r" + i; })
     .attr("x", function(d,i) { return rect_data[i].x })
@@ -91,42 +82,39 @@ function draw(data,visu_svg) {
     .attr("width", function(d,i) { return rect_data[i].width })
     .attr("height", h)
     .attr("stroke", "white")
-    .attr("fill", function(d) {return color_scale(d.rating);})
+    .attr("fill", function(d) {return color_scale(d.vote_sum);})
     .on("mouseover",  function(d,i) {
       visu_svg.select("#r"+parseInt(d.id))
         .transition()
         .duration(100)
-        .attr("fill", "#66CCFF");
-      draw_text(review_data,rect_data[d.id],text_container);
+        .attr("fill", "#44AADD");
+      draw_text(review_data,rect_data[d.id]);
     })
     .on("mouseout",function (d,i) {
       visu_svg.select("#r"+parseInt(d.id))
         .transition()
         .duration(100)
-        .attr("fill", color_scale(d.rating));
-      delete_text(d.id,text_container);
+        .attr("fill", color_scale(d.vote_sum));
+      delete_text(d.id);
     });
   }
 
-function draw_text(data,rect,text_svg){
-  var text_box = text_svg.append("rect")
-    .attr("id","t"+ rect.id)
-    .attr("x", function(d,i) { return rect.x })
-    .attr("y", 0)
-    .attr("width", 400 )
-    .attr("height", 400)
-    .attr("stroke", "gold")
-    .attr("fill", "#55BBEE");
-
-  d3.select(".smart_review_info")
-    .text(data[rect.id].info_text);
+function draw_text(data,rect){
+  d3.select(".smart_text")
+    .style("display","block")
+    .style("width","400px")
+    .style("height","300px")
+    .style("background-color", "#66CCFF")
+    .style("overflow-y","auto")
+    .text(data[rect.id].id + "         " +
+          data[rect.id].info_text);
 }
 
-function delete_text(id,text_svg){
-  text_svg.select("#t"+parseInt(id)).remove();
-  d3.select(".smart_review_info")
-    .text("");
+function delete_text(id){
+  d3.select(".smart_text")
+    .style("display","none");
 }
+
 
 init_reviews();
 

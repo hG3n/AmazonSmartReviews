@@ -7,6 +7,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   if(amazon == "amazon") {
     chrome.tabs.executeScript( {file: "d3/d3.min.js"});
     chrome.tabs.executeScript( {file: "setup.js" });
+    chrome.tabs.executeScript( {file: "functions.js" });
     chrome.tabs.executeScript( {file: "reviews.js" });
   } else {
     alert("This is just for Amazon-Product Sites");

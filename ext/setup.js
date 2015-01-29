@@ -29,15 +29,16 @@ var setup_structure = function() {
 
   // create div for review visualisation
   var review_visu = document.createElement("div");
-  review_visu.className = "smart_review_visu";
+  review_visu.className = "smart_visu";
   review_div.appendChild(review_visu);
 
   // create div for review text
   var review_text = document.createElement("div");
-  review_text.className = "smart_review_text";
+  review_text.className = "smart_textbox";
+  review_text.style.height = "300px";
   review_div.appendChild(review_text);
   var review_info = document.createElement("div");
-  review_info.className = "smart_review_info";
+  review_info.className = "smart_text";
   review_text.appendChild(review_info);
 }
 setup_structure();
