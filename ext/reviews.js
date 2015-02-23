@@ -8,7 +8,9 @@
 
 // global variables 
 var padding = 50
-var w = window.innerWidth - padding;
+
+var w = document.getElementById("smart_visu").parentNode.offsetWidth;
+
 var h = 50;
 var review_data = [];
 var rect_data = [];
@@ -35,11 +37,10 @@ function init_reviews() {
       });
 
       min_vote_sum = d3.min(data,function(d) {         
-        return parseInt(d.vote_sum);
+        return parseFloat(d.vote_sum);
       });
       max_vote_sum = d3.max(data,function(d) {
-
-        return parseInt(d.vote_sum)
+        return parseFloat(d.vote_sum)
       });
       var vote_sum_scale = d3.scale.linear()        // rates reviews from 1 to 10
         .domain([min_vote_sum,max_vote_sum])        // depending on max and min vote_sum of all
@@ -55,13 +56,13 @@ function init_reviews() {
 
       var current_width = 0;
       review_data.forEach(function(d,i) {
-        mapped_width = parseInt(screen_scale(vote_sum_scale(d.vote_sum)));
+        mapped_width = parseFloat(screen_scale(parseFloat(vote_sum_scale(d.vote_sum))));
         rect_data.push({id: d.id, 
-                        width: mapped_width,
+                        width: mapped_width-1,      // -1 because of the stroke width
                         x: current_width,
                         vote_sum: d.vote_sum,
                         rating: d.rating});
-        current_width += mapped_width;
+        current_width += mapped_width-1;
       });
     }
     draw(rect_data,visu_container);

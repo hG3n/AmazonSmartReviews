@@ -30,6 +30,7 @@ var setup_structure = function() {
   // create div for review visualisation
   var review_visu = document.createElement("div");
   review_visu.className = "smart_visu";
+  review_visu.id = "smart_visu";
   review_visu.style.height = "78px";
   review_div.appendChild(review_visu);
 
