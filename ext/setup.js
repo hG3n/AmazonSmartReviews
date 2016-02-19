@@ -1,9 +1,9 @@
 var setup_structure = function() {
   // clear the review div
 
-  var clear_div = document.getElementById("purchase-similarities_feature_div");
-  clear_div.innerHTML = "";
-  clear_div = document.getElementById("buyxgety_feature_div");
+  //var clear_div = document.getElementById("purchase-sims-feature");
+  //clear_div.innerHTML = "";
+  /*clear_div = document.getElementById("buyxgety_feature_div");
   clear_div.innerHTML = "";
   clear_div = document.getElementById("promotions_feature_div");
   clear_div.innerHTML = "";
@@ -17,6 +17,7 @@ var setup_structure = function() {
   clear_div.innerHTML = "";
   clear_div = document.getElementById("revDivider");
   clear_div.innerHTML = "";
+  */
 
   // clear old comments
   var review_div = document.getElementById("cm_cr_dpwidget");
@@ -44,4 +45,4 @@ var setup_structure = function() {
   review_text.appendChild(review_info);
 }
 setup_structure();
-console.log("setup finished!");
+//console.log("setup finished!");

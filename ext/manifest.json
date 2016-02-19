@@ -7,11 +7,8 @@
   "permissions": [
     "activeTab",
     "tabs",
-    "http://*/",
-    "*://*/*",
-    "http://localhost:8000/*",
-    "Access-Control-Allow-Origin: http://webuser.uni-weimar.de/~senu8384/test.csv",
-    "http://webuser.uni-weimar.de/~senu8384/test.csv"
+    "Access-Control-Allow-Origin: http://amazon.smart-comments.com/id/*/ ",
+    "http://amazon.smart-comments.com/*"
   ],
 
   "background": {
